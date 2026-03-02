@@ -16,22 +16,22 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "FieldMatrix AI — Autonomous Agents for Field Operations",
+  title: "FieldMatrix AI Agents — Your AI Employee. We Set It Up. You Just Use It.",
   description:
-    "Deploy AI agents that automate inspections, compliance, logistics, and field intelligence. Real-time decision-making at the edge.",
+    "Managed AI agent hosting for local businesses. We build your AI employee, deploy it on Telegram & Discord, and you just use it. Starting at $149/mo.",
   openGraph: {
-    title: "FieldMatrix AI — Autonomous Agents for Field Operations",
+    title: "FieldMatrix AI Agents — Your AI Employee",
     description:
-      "Deploy AI agents that automate inspections, compliance, logistics, and field intelligence.",
+      "Managed AI agent hosting for local businesses. We build it. You talk to it. It works for you.",
     url: "https://agents.fieldmatrix.ai",
-    siteName: "FieldMatrix AI",
+    siteName: "FieldMatrix AI Agents",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "FieldMatrix AI — Autonomous Agents for Field Operations",
+    title: "FieldMatrix AI Agents — Your AI Employee",
     description:
-      "Deploy AI agents that automate inspections, compliance, logistics, and field intelligence.",
+      "Managed AI agent hosting for local businesses. We build it. You talk to it. It works for you.",
   },
   robots: { index: true, follow: true },
 };
