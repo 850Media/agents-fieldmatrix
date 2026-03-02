@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cyan-glow: 0 0 30px rgba(6, 182, 212, 0.3);
+  --cyan-glow-strong: 0 0 60px rgba(6, 182, 212, 0.5);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0a0e1a;
+  color: #e2e8f0;
+}
+
+/* Grid background pattern */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(6, 182, 212, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.03) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+/* Radial glow overlay */
+.radial-glow {
+  background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(6, 182, 212, 0.08) 0%, transparent 70%);
+}
+
+/* Cyan glow effects */
+.glow-border {
+  box-shadow: inset 0 0 0 1px rgba(6, 182, 212, 0.2), var(--cyan-glow);
+}
+
+.glow-border-hover:hover {
+  box-shadow: inset 0 0 0 1px rgba(6, 182, 212, 0.4), var(--cyan-glow-strong);
+}
+
+/* Button glow */
+.btn-glow {
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.4), 0 0 60px rgba(6, 182, 212, 0.1);
+  transition: all 0.3s ease;
+}
+
+.btn-glow:hover {
+  box-shadow: 0 0 30px rgba(6, 182, 212, 0.6), 0 0 80px rgba(6, 182, 212, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Scanline effect for hero */
+.scanlines::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(6, 182, 212, 0.015) 2px,
+    rgba(6, 182, 212, 0.015) 4px
+  );
+  pointer-events: none;
+}
+
+/* Pricing card highlight */
+.pricing-highlight {
+  position: relative;
+}
+
+.pricing-highlight::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(6, 182, 212, 0.5) 0%, rgba(6, 182, 212, 0.1) 100%);
+  z-index: -1;
+}
+
+/* Section divider line */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.3), transparent);
+}
+
+/* Text gradient */
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #22d3ee 0%, #06b6d4 50%, #0891b2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* FAQ accordion */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-answer.open {
+  max-height: 500px;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
