@@ -24,7 +24,7 @@ export async function POST(req: NextRequest) {
       cancel_url: `${origin}/#pricing`,
     });
 
-    return NextResponse.json({ sessionId: session.id });
+    return NextResponse.json({ url: session.url });
   } catch (err) {
     const message =
       err instanceof Error ? err.message : "Internal server error";

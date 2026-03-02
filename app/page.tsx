@@ -144,9 +144,8 @@ export default function LandingPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ priceId }),
       });
-      const { sessionId } = await res.json();
-      const stripe = await stripePromise;
-      await stripe?.redirectToCheckout({ sessionId });
+      const { url } = await res.json();
+      if (url) window.location.href = url;
     } catch {
       alert("Something went wrong. Please try again.");
     } finally {
