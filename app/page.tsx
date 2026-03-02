@@ -21,7 +21,7 @@ const PLANS = [
   },
   {
     name: "Pro",
-    price: 199,
+    price: 299,
     priceId: "price_1T6a9i2mxB8h9GvSfsjaQfHa",
     popular: true,
     features: [
